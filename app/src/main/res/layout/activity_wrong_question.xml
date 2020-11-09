@@ -4,7 +4,7 @@
     android:id="@+id/activity_wrong_question"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context="com.example.hp.demo.WrongQuestion">
+    tools:context="com.son.zephyrus.AndoidQuizApp.WrongQuestion">
 
     <ListView
         android:id="@+id/listView1"

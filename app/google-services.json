@@ -1,0 +1,69 @@
+{
+  "project_info": {
+    "project_number": "1066005272491",
+    "firebase_url": "https://androidapp-f0e37.firebaseio.com",
+    "project_id": "androidapp-f0e37",
+    "storage_bucket": "androidapp-f0e37.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:1066005272491:android:e573f4026975d918e6e4ee",
+        "android_client_info": {
+          "package_name": "com.example.hp.demo"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "1066005272491-mo21v4c00v76tfb83804n3osf2kvr79g.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBCu8lWdvT-QNMX4aijUdwFCH3Uu9HKnrA"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "1066005272491-mo21v4c00v76tfb83804n3osf2kvr79g.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:1066005272491:android:eabacae24eaba85ce6e4ee",
+        "android_client_info": {
+          "package_name": "com.son.zephyrus.AndoidQuizApp"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "1066005272491-mo21v4c00v76tfb83804n3osf2kvr79g.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBCu8lWdvT-QNMX4aijUdwFCH3Uu9HKnrA"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "1066005272491-mo21v4c00v76tfb83804n3osf2kvr79g.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
