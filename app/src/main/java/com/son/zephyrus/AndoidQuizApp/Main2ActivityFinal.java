@@ -3,6 +3,7 @@ package com.son.zephyrus.AndoidQuizApp;
 import android.content.DialogInterface;
 import android.content.Intent;
 import android.os.CountDownTimer;
+import android.support.v4.media.session.PlaybackStateCompat;
 import android.support.v7.app.AlertDialog;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
@@ -23,7 +24,7 @@ import java.util.Random;
 import java.util.concurrent.TimeUnit;
 
 public class Main2ActivityFinal extends AppCompatActivity {
-
+    private SoundManager mSoundManager;
     List<QuestionRandom> quesList1;
     public int score=0;
     int ctr1=1;
@@ -48,6 +49,9 @@ public class Main2ActivityFinal extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main2_final);
+        mSoundManager = new SoundManager();
+        mSoundManager.initSounds(getBaseContext());
+        mSoundManager.addSound(1, R.raw.gun);
         qstnNo = (TextView)findViewById(R.id.qstnNo);
         Intent iin=getIntent();
         Bundle b=iin.getExtras();
@@ -59,7 +63,7 @@ public class Main2ActivityFinal extends AppCompatActivity {
         number=0;
         DbHelper db= new DbHelper(this);
         textViewTime1 = (TextView)findViewById(R.id.textViewTime);
-        final CounterClass timer = new CounterClass(1800000, 1000);
+        final CounterClass timer = new CounterClass(600000, 1000);
         timer.start();
         quesList1=db.getAllQuestions3(tableName);
         for(int i=0;i<300;i++){
@@ -79,6 +83,7 @@ public class Main2ActivityFinal extends AppCompatActivity {
         rdc1=(RadioButton)findViewById(R.id.radio2);
         rdd1=(RadioButton)findViewById(R.id.radio3);
         butNext1=(Button)findViewById(R.id.button1);
+
         setQuestionView();
         grp = (RadioGroup) findViewById(R.id.radioGroup1);
         butNext1.setEnabled(false);
@@ -90,7 +95,7 @@ public class Main2ActivityFinal extends AppCompatActivity {
             }
         });
         progressBar = (ProgressBar) findViewById(R.id.progressBar);
-        progressBar.setMax(30);
+        progressBar.setMax(10);
         progressBar.setProgress(1);
         butNext1.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -112,8 +117,8 @@ public class Main2ActivityFinal extends AppCompatActivity {
                 }
                 grp.clearCheck();
                 butNext1.setEnabled(false);
-                if (ctr1 < 31) {
-                    if (ctr1 == 30) {
+                if (ctr1 < 11) {
+                    if (ctr1 == 10) {
                         butNext1.setText("End Test");
                     }
                     currentQ1 = quesList1.get(list.get(ctr1));
@@ -163,10 +168,10 @@ public class Main2ActivityFinal extends AppCompatActivity {
         rdb1.setText(currentQ1.getOPTB3());
         rdc1.setText(currentQ1.getOPTC3());
         rdd1.setText(currentQ1.getOPTD3());
-        if(ctr1<10)
-            qstnNo.setText("0" + ctr1 + "/30");
+        if(ctr1<1)
+            qstnNo.setText("0" + ctr1 + "/10");
         else
-            qstnNo.setText("" + ctr1+ "/30");
+            qstnNo.setText("" + ctr1+ "/10");
         ctr1++;
     }
 
@@ -195,7 +200,7 @@ public class Main2ActivityFinal extends AppCompatActivity {
         //Creating dialog box
         AlertDialog alert = builder.create();
         //Setting the title manually
-        // alert.setTitle("CompQuiz");
+        // alert.setTitle("Rog_Quiz");
         alert.show();
     }
 }

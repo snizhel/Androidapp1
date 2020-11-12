@@ -60,7 +60,7 @@ public class Main2ActivitySec2 extends AppCompatActivity {
         number=0;
         DbHelper db= new DbHelper(this);
         textViewTime1 = (TextView)findViewById(R.id.textViewTime);
-        final CounterClass timer = new CounterClass(1800000, 1000);
+        final CounterClass timer = new CounterClass(600000, 1000);
         timer.start();
         quesList1=db.getAllQuestions(tableName,catName);
 
@@ -169,10 +169,10 @@ public class Main2ActivitySec2 extends AppCompatActivity {
         rdb1.setText(currentQ1.getOPTB());
         rdc1.setText(currentQ1.getOPTC());
         rdd1.setText(currentQ1.getOPTD());
-        if(ctr1<10)
-            qstnNo.setText("0" + ctr1 + "/30");
+        if(ctr1<1)
+            qstnNo.setText("0" + ctr1 + "/10");
         else
-            qstnNo.setText("" + ctr1+ "/30");
+            qstnNo.setText("" + ctr1+ "/10");
         ctr1++;
     }
 

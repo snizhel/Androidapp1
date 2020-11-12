@@ -62,7 +62,7 @@ public class Main2ActivitySec3 extends AppCompatActivity {
         number=0;
         DbHelper db= new DbHelper(this);
         textViewTime1 = (TextView)findViewById(R.id.textViewTime);
-        final Main2ActivitySec3.CounterClass timer = new CounterClass(1800000, 1000);
+        final Main2ActivitySec3.CounterClass timer = new CounterClass(600000, 1000);
         timer.start();
         quesList1=db.getAllQuestions2(tableName,catName);
 
@@ -95,7 +95,7 @@ public class Main2ActivitySec3 extends AppCompatActivity {
             }
         });
         progressBar = (ProgressBar) findViewById(R.id.progressBar);
-        progressBar.setMax(30);
+        progressBar.setMax(10);
         progressBar.setProgress(1);
         butNext1.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -117,8 +117,8 @@ public class Main2ActivitySec3 extends AppCompatActivity {
                 }
                 grp.clearCheck();
                 butNext1.setEnabled(false);
-                if (ctr1 < 31) {
-                    if (ctr1 == 30) {
+                if (ctr1 < 11) {
+                    if (ctr1 == 10) {
                         butNext1.setText("End Test");
                     }
                     currentQ1 = quesList1.get(list.get(ctr1));
@@ -171,10 +171,10 @@ public class Main2ActivitySec3 extends AppCompatActivity {
         rdb1.setText(currentQ1.getOPTB2());
         rdc1.setText(currentQ1.getOPTC2());
         rdd1.setText(currentQ1.getOPTD2());
-        if(ctr1<10)
-            qstnNo.setText("0" + ctr1 + "/30");
+        if(ctr1<1)
+            qstnNo.setText("0" + ctr1 + "/10");
         else
-            qstnNo.setText("" + ctr1+ "/30");
+            qstnNo.setText("" + ctr1+ "/10");
         ctr1++;
     }
 

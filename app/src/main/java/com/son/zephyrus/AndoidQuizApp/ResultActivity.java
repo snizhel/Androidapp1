@@ -69,13 +69,13 @@ public class ResultActivity extends AppCompatActivity {
 
         }
 
-        txtCorrectAns.setText("Total Answered : 30" + "\n" + "Correct Answered : " + score + "\nWrong Answered : " + (30 - score));
+        txtCorrectAns.setText("Total Answered : 10" + "\n" + "Correct Answered : " + score + "\nWrong Answered : " + (10 - score));
 
         wrongQuests = getIntent().getStringArrayListExtra("wrongQuestions");
         selectedAnswers = getIntent().getStringArrayListExtra("selectedAnswer");
         actualAnswers = getIntent().getStringArrayListExtra("actualAnswer");
 
-        double perc = score*3.33;
+        double perc = score*1.11;
         DecimalFormat df = new DecimalFormat("##.###");
         tvPerc = (TextView) findViewById(R.id.tvPerc);
         tvPerc.setText(""+df.format(perc)+" %");

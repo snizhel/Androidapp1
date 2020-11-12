@@ -79,7 +79,7 @@
                         android:layout_height="wrap_content"
                         android:layout_alignParentTop="true"
                         android:background="@color/transparent"
-                        android:text="This round consists of 30 Questions. \nDuration: 30 Minutes \nThis section will decide your rank at Scoreboard \n\nPLAY WELL"
+                        android:text="This round consists of 10 Questions. \nDuration: 10 Minutes \nThis section will decide your rank at Scoreboard \n\nPLAY WELL"
                         android:textAlignment="center"
                         android:paddingLeft="20dp"
                         android:paddingBottom="20dp"
