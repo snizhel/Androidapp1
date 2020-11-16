@@ -89,7 +89,8 @@
                 android:layout_height="wrap_content"
                 android:checked="false"
                 android:text="RadioButton"
-                android:textColor="@color/colorPrimaryDark" />
+                android:textColor="@color/colorPrimaryDark"
+                />
 
             <RadioButton
                 android:id="@+id/radio1"
@@ -127,6 +128,8 @@
         android:layout_alignParentBottom="true"
         android:layout_marginLeft="30dp"
         android:layout_marginRight="30dp"
-        android:layout_marginTop="15dp"/>
+        android:layout_marginTop="15dp"
+        android:onClick="sendMessage"
+        tools:ignore="OnClick" />
 
 </RelativeLayout>

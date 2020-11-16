@@ -100,6 +100,7 @@ public class Main2ActivityFinal extends AppCompatActivity {
         butNext1.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+                mSoundManager.playSound(1);
                 progress = progress+1;
                 progressBar.setProgress(progress);
                 RadioButton answer = (RadioButton) findViewById(grp.getCheckedRadioButtonId());
@@ -127,6 +128,10 @@ public class Main2ActivityFinal extends AppCompatActivity {
                     timer.onFinish();
                     timer.cancel();
                 }
+            }
+            public void sendMessage(View view) {
+                // Play your sound
+
             }
         });
     }
